@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+Autor: Guilherme Dias
+Local: Senac Rio
+Data: 06/03/2018
+Finalidade: Página principal do projeto
+Alterações: 
+
 -->
-<html>
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Aula 02</title>
     </head>
-    <body>
+    <body> 
         <?php
-        // put your code here
+        #quando queremos definir uma variavel
         ?>
     </body>
 </html>
