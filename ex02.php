@@ -1,14 +1,14 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<title>Exercicio 2 </title>
+	<title>Exercicio 02 </title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body align="center">
 	<div class="col-xs-4 col-xs-offset-4">
 		<fieldset>
-			<legend>Exercicio 2</legend>
+			<legend>Exercicio</legend>
 			<form action="#" method="post">
 				<label for="numero_">Numero</label><br>
 				<input type="number" name="numero" ><br>
@@ -21,11 +21,13 @@
 	<div class="col-xs-4 col-xs-offset-4" style="margin-top: 2%">
 		<P>Resultado:</P>
 		<div class="jumbotron">
-			<?php 
-				$a = "a"; $l = "l"; $u = "u"; $n = "n"; $o = "o"; $s = "s";
-				echo "<p>".$a.$l.$u.$n.$o.$s."</p>";
-				
-			 ?>
+			<?php
+				if(isset($_POST['numero']) && $_POST['numero'] != '') :
+					$resultado = $_POST['numero']%2 == 0 ? "Par" : "Impar";
+
+					echo $resultado; 
+				endif
+			?>
 		</div>
 	</div>
 </body>
