@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<title>Exercicio 05 </title>
+	<title>Exercicio 5 </title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body align="center">
@@ -10,17 +10,8 @@
 		<fieldset>
 			<legend>Exercicio 5</legend>
 			<form action="#" method="post">
-				<label for="numero_">Numero de Eleitores</label><br>
-				<input type="number" name="eleitores" ><br>
-
-				<label for="numero_">Votos Validos</label><br>
-				<input type="number" name="validos" ><br>
-				
-				<label for="numero_">Votos em Branco</label><br>
-				<input type="number" name="branco" ><br>
-				
-				<label for="numero_">Votos nulos</label><br>
-				<input type="number" name="nulo" ><br>
+				<label for="numero_">Numero</label><br>
+				<input type="number" name="numero" ><br>
 				
 				<button type="submit" class="btn">Enviar</button>
 			</form>
@@ -31,22 +22,9 @@
 		<P>Resultado:</P>
 		<div class="jumbotron">
 			<?php
-				if(isset($_POST['eleitores']) && isset($_POST['validos']) && isset($_POST['branco']) && isset($_POST['nulo']) ) :
-					   
-					$eleitores 		= intval($_POST['eleitores']);
-					$validosPercent = (intval($_POST['validos'])/$eleitores)*100;
-					$brancoPercent 	= (intval($_POST['branco'])/$eleitores)*100;
-					$nuloPercent 	= (intval($_POST['nulo'])/$eleitores)*100;
-
-					echo "
-						Total de Eleitores: ${eleitores}<br>
-						Votos válidos: ${validosPercent}%<br> 
-						Votos em branco: ${brancoPercent}%<br> 
-						Votos Nulos: ${nuloPercent}%<br> 
-					";
-
-				endif
-			?>
+				$mediaAluno = (8*1 + 7.5*2 + 10*3 + 9*4) / (1+2+3+4);
+				echo "A media do aluno foi de: ${mediaAluno}";
+			 ?>
 		</div>
 	</div>
 </body>

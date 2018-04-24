@@ -2,17 +2,17 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<title>Exercicio 1 </title>
+	<title>Exercicio 12 </title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body align="center">
 	<div class="col-xs-4 col-xs-offset-4">
 		<fieldset>
-			<legend>Exercicio 1</legend>
+			<legend>Exercicio 12</legend>
 			<form action="#" method="post">
-				<label for="numero_">Numero</label><br>
-				<input type="number" name="numero" ><br>
-				
+				<input type="number" name="ex12_int1" placeholder="Valor em R$"><br>
+				<input type="number" name="ex12_int2" placeholder="Cotação do dolar"><br>				
+
 				<button type="submit" class="btn">Enviar</button>
 			</form>
 		</fieldset>
@@ -22,11 +22,11 @@
 		<P>Resultado:</P>
 		<div class="jumbotron">
 			<?php 
-				$inteiro = 10;
-				$real = 20.3;
-				echo "<li>O valor inteiro é ${inteiro} </li>";
-				echo "<li>O valor real é ${real} </li>";
-			 
+				if( isset($_POST['ex12_int1']) && isset($_POST['ex12_int1']) ) {
+					$a = intval($_POST['ex12_int1']);
+					$b = intval($_POST['ex12_int2']);
+					echo "R$${a} equivale a $".($a/$b)."<br>";
+				}
 			?>
 		</div>
 	</div>
